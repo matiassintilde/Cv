@@ -1,17 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #cae7d0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f8;
+    color: #1f2933;
+    line-height: 1.6;
 }
-hr {
-    
-    border-style: dotted none none none;
-    border-width: 8px;
-    border-color: #f1f1db;
-    height: 0px;
-    width: 40%;
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
 }
-h1  {
-    color:#219F94;
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
-h3{
-    color:#219F94;
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem;
+    color: #0f766e;
+}
+
+h2 {
+    margin-top: 36px;
+    margin-bottom: 14px;
+    color: #0f766e;
+    border-bottom: 2px solid #d9e7e5;
+    padding-bottom: 8px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.role {
+    margin: 0 0 16px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #334e68;
+}
+
+.summary {
+    margin: 0;
+}
+
+.contact-card {
+    min-width: 280px;
+    background: #f8fbfb;
+    border: 1px solid #d9e7e5;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    border: 0;
+    padding-bottom: 0;
+}
+
+section {
+    background: #ffffff;
+    margin-top: 24px;
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.job + .job {
+    margin-top: 24px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: baseline;
+}
+
+.company {
+    margin: 4px 0 8px;
+    font-weight: 700;
+    color: #486581;
+}
+
+ul {
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+
+.plain-list {
+    margin-left: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .contact-card {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
